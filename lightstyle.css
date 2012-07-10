@@ -1,0 +1,111 @@
+body,
+html {
+	margin:0;
+	padding:0;
+	color:#000;
+	background:white;
+}
+#wrap {
+	width: 1000px;
+	margin:0 auto;
+	background: white;
+}
+
+#header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	padding: 10px 10px;
+	background: white;
+	font-family: Georgia;
+	font-size: 40px;
+	text-align: left;
+	text-indent: 20px;
+	list-style: none;
+	font-style: oblique;
+	font-weight: 600;
+}
+
+#header  ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#header li {
+	display: inline;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#imageWrapper {
+	position: relative;
+	height: 0px;
+	}
+	
+#bottomImage{
+	position: absolute;
+	bottom: 0;
+}
+
+#sidebar {
+	float: left;
+	position: fixed;
+	left: 0;
+	top: 100px;
+	width: 150px;
+	padding:50px;
+	background: white;
+	text-align: right;
+	font-size: 20px;
+	color: black;
+	font-family:Georgia;
+	list-style: none;
+	background: url(../logo/tunder_fly.jpg);
+	background-size: 100px 100%;
+	background-repeat: no-repeat;
+}
+
+#sidebar  ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#sidebar li {
+	list-style: none;
+	margin: 0;
+	padding: 10px;
+}
+
+#main {
+	float: right;
+	width:900px;
+	padding: 50px;
+	background: white;
+	font-family:Georgia;
+	background: url(../logo/shadow.jpg);
+	background-size: 10px 100%;
+	background-repeat: no-repeat;
+	word-wrap: break-word
+}
+
+h2 {
+	margin:0 0 lem;
+}
+
+#footer {
+	position: fixed;
+	bottom: 0;
+	clear: both;
+	text-align: center;
+	padding: 5px 10ps;
+	background: white;
+	font-family:Helvetica;
+	font-size: 11px;
+}
+
+#footer p{
+	margin: 0;
+}

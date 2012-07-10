@@ -1,0 +1,38 @@
+<form action="feedback.php" method="post">
+<table border="0" cellpadding="8" cellspacing="8" summary="feedback form">
+<tr><td><label for="tswname">Name</label>:</td><td><input type="text" name="fullname" id="tswname" size="25" /></td></tr>
+<tr><td><label for="tswemail">Email address</label>:</td><td><input type="text" id="tswemail" name="email" size="25" /></td></tr>
+<tr>
+<td colspan="2">
+<label for="tswcomments">Comments</label><br />
+<textarea rows="15" cols="45" name="comments" id="tswcomments"></textarea>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+<script type="text/javascript" src="http://api.recaptcha.net/challenge?k=6LfuNAgAAAAAANrMNR4_gbj_uZICcsqYd-sQwHu_"></script>
+<noscript>
+<iframe src="http://api.recaptcha.net/noscript?k=6LfuNAgAAAAAANrMNR4_gbj_uZICcsqYd-sQwHu_" height="300" width="500" frameborder="0" title="CAPTCHA test"></iframe>
+<br />
+<label for="tswcaptcha">Copy and paste the code provided in above box here:</label><br />
+<textarea name="recaptcha_challenge_field" id="tswcaptcha" rows="3" cols="40"></textarea>
+<input type="hidden" name="recaptcha_response_field" value="manual_challenge" />
+</noscript>
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+<input type="submit" value="Send Feedback" /><br />
+Form by <a href="http://www.thesitewizard.com/">thesitewizard.com</a>
+</td>
+</tr>
+</table>
+</form>
+
+--------------
+powered by sitewizerd html:
+
+<!-- THESITEWIZARD.COM LINK CODE STARTS HERE -->
+<a href="http://www.thesitewizard.com/" target="_top">
+<img src="http://www.thesitewizard.com/images/tsw88x31pow.gif" border="0" alt="Free Site Design Tips and Tutorials at thesitewizard.com" width="88" height="31" /></a>
+<!-- THESITEWIZARD.COM LINK CODE ENDS HERE -->
