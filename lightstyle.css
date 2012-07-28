@@ -1,29 +1,31 @@
 body,
 html {
-	margin:0;
+	margin:auto;
 	padding:0;
 	color:#000;
 	background:white;
 }
+
 #wrap {
-	width: 1000px;
-	margin:0 auto;
-	background: white;
+	width: 1200px;
+	margin:auto;
+	background: yellow;
 }
 
 #header {
 	position: fixed;
 	top: 0;
 	left: 0;
-	padding: 10px 10px;
+	width: 1200px;
+	padding: 0px 0px;
 	background: white;
 	font-family: Georgia;
-	font-size: 40px;
+	font-size: 30px;
 	text-align: left;
-	text-indent: 20px;
 	list-style: none;
 	font-style: oblique;
-	font-weight: 600;
+	font-weight: 400;
+	background: white;
 }
 
 #header  ul {
@@ -39,22 +41,15 @@ html {
 	padding: 0;
 }
 
-#imageWrapper {
-	position: relative;
-	height: 0px;
-	}
-	
-#bottomImage{
-	position: absolute;
-	bottom: 0;
-}
+/*
+	Sidebar
+*/
 
 #sidebar {
 	float: left;
 	position: fixed;
 	left: 0;
 	top: 100px;
-	width: 150px;
 	padding:50px;
 	background: white;
 	text-align: right;
@@ -65,10 +60,11 @@ html {
 	background: url(../logo/tunder_fly.jpg);
 	background-size: 100px 100%;
 	background-repeat: no-repeat;
+	margin:auto;
 }
 
 #sidebar  ul {
-	margin: 0;
+	margin: 150;
 	padding: 0;
 	list-style: none;
 }
@@ -79,27 +75,149 @@ html {
 	padding: 10px;
 }
 
+/* 
+	Mainbody
+*/
+
 #main {
-	float: right;
+	float: left;
+	margin-top: 75px;
+	margin-left:250px;
+	margin-right:250px;
+	margin-bottom: 100px;
+	position: static;
 	width:900px;
-	padding: 50px;
+	padding-left: 50px;
+	padding-top: 50px;
 	background: white;
 	font-family:Georgia;
-	background: url(../logo/shadow.jpg);
-	background-size: 10px 100%;
-	background-repeat: no-repeat;
-	word-wrap: break-word
+	box-shadow: 0px 0px 10px 3px grey;
+	border-radius: 5px;
+	word-wrap: break-word;
+	z-index:0;
 }
 
-h2 {
-	margin:0 0 lem;
+/*
+	Slideshow
+*/
+
+#slides {
+	margin-top: 250px;
+	margin-bottom: 250px;
+	margin-left:auto;
+	margin-right:auto;
+	width:600px;
+	height:600px;
+	position:relative;
+	z-index:100;
 }
+
+#frame {
+	position:absolute;
+	z-index:0;
+	width:739px;
+	height:341px;
+	top:-3px;
+	left:-80px;
+}
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container {
+	width:570px;
+	overflow:hidden;
+	position:relative;
+	display:block;
+	padding-left: auto;
+	padding-right: auto;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 3px grey;
+}
+
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+/*.slides_container a {
+	width:600px
+	display:block;
+	box-shadow: 0px 0px 10px 3px grey; */
+}
+
+.slides_container a img {
+	display:block;
+	padding-right: auto;
+	padding-left: auto;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px 3px grey;
+}
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next,#slides .prev {
+	position:absolute;
+	top:10px;
+	left:-39px;
+	width:24px;
+	height:43px;
+	display:block;
+	z-index:101;
+}
+
+#slides .next {
+	left:585px;
+}
+
+/*
+	Pagination
+*/
+
+.pagination {
+	margin:26px auto 0;
+	width:100px;
+}
+
+.pagination li {
+	float:left;
+	margin:0 1px;
+	list-style:none;
+}
+
+.pagination li a {
+	display:block;
+	width:12px;
+	height:0;
+	padding-top:12px;
+	background-image:url(../img/pagination.png);
+	background-position:0 0;
+	float:left;
+	overflow:hidden;
+}
+
+.pagination li.current a {
+	background-position:0 -12px;
+}
+
+/*
+	Footer
+*/
 
 #footer {
 	position: fixed;
 	bottom: 0;
-	clear: both;
-	text-align: center;
+	margin:auto;
+	text-align: right;
 	padding: 5px 10ps;
 	background: white;
 	font-family:Helvetica;
