@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <head>
-<link rel="stylesheet" type="text/css" href="lightstyle.css" />
-<link rel="SHORTCUT ICON" href="http://www.rebexart.com/logo/favicon.ico"><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>RebexArt -Through the Clouds of Time</title></head>
-<title>RebexArt -Through the Clouds of Time</title>
-<html lang="en">
+	<link rel="stylesheet" type="text/css" href="lightstyle.css" />
+	<link rel="SHORTCUT ICON" href="http://www.rebexart.com/logo/favicon.ico"><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+	<title>RebexArt -Through the Clouds of Time</title>
+
+	<html lang="en">
 	<meta charset="utf-8">
-	
-	<title>Slides, A Slideshow Plugin for jQuery</title>
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
 	<script src="js/slides.min.jquery.js"></script>
+	<script src="js/jquery.anchor.js"></script>
 	
 	<script>
 		$(function(){
@@ -31,11 +31,7 @@
 			});
 		});
 	</script>
-	<?php 
-	/* Short and sweet */
-	define('WP_USE_THEMES', false);
-	require('http://www.rebexart.com/english/blog/');
-	?>
+
 </head>
 <body>
 <div id="wrap">
@@ -43,8 +39,8 @@
 	<div id="header">
 	<table>
 		<tr>
-			<td><a href="http://www.rebexart.com/english/en_index.html"><img style="border: 0px solid ; width: 50px; height: 50px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/name_small.jpg"></a></td>
-			<td> <span style="padding-right: 690px;"> Welcome to RebexArt.com <span> </td>
+			<td><a href="en_index.html"><img style="border: 0px solid ; width: 50px; height: 50px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/name_small.jpg"></a></td>
+			<td> <span style="padding-right: 690px;"> welcome to RebexArt.com <span> </td>
 			<td><a href="http://rebexart.tumblr.com/"><img style="border: 0px solid ; width: 20px; height: 20px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/Tumblr-icon.png"></a></td>
 			<td><a href="http://rebextrip.deviantart.com/"><img style="border: 0px solid ; width: 20px; height: 20px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/deviantart-icon.png"></a></td>
 			<td><a href="http://www.linkedin.com/pub/rebecca-nie/2b/71/794"><img style="border: 0px solid ; width: 20px; height: 20px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/linkedin.png"></a></td>
@@ -56,53 +52,102 @@
 	
 	<div id="sidebar">
 		<ul>
-			<li><a style="color: black;" href="eng_artist_bio.html">ABOUT ME</a></li>
-			<li><a style="color: black;" href="en_drawings.html">DRAWING</a></li>
-			<li><a style="color: black;" href="en_paintings.html">PAINTING</a></li>
-			<li><a style="color: black;" href="en_photo.html">PHOTO</a></li>
-			<li><a style="color: black;" href="http://www.rebexart.com/english/blog/">BLOG</a></li>
-			<li><a style="color: black;" href="http://rebextrip.deviantart.com/">DEVIANT ART</a></li>
-			<li><a style="color: black;" href="en_friends.html">FRIENDS</a></li>
+			<li><a style="color: black;" href="eng_artist_bio.html">about me</a></li>
+			<li><a style="color: black;" href="#Paintings" id="anchor1" class="anchorLink">painting</a></li>
+			<li><a style="color: black;" href="#Drawings" id="anchor2" class="anchorLink">drawing</a></li>
+			<li><a style="color: black;" href="http://www.rebexart.com/english/blog/">blog</a></li>
 		</ul> 
 	</div>
 	
 	<div id="main">
 		<div id="thumbnails">
-		<h2>The thumbnails go here.</h2>
+			<table>
+				<tr>
+					<td>
+						<div class="icon">
+							<a href="#Paintings" id="anchor1" class="anchorLink" ><img src="../logo/water-lily.png" width="150" height="150" alt="Slide 1"></a>
+						</div>
+					</td>
+					<td>
+						<div class="icon">
+							<a href="#Drawings" id="anchor2" class="anchorLink"><img src="../logo/smoky-hands.png" width="150" height="150" alt="Slide 1"></a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<a href="#Paintings" id="anchor1" class="anchorLink">painting</a>
+					</td>
+					<td>
+						<a href="#Drawings" id="anchor2" class="anchorLink">drawing</a>
+					</td>			
+				</tr>
+			</table>
 		</div>
-		
+
 		<div id="text">
-		<h2>Here is where the blog text lives.</h2>
-			<?php query_posts('showposts=3'); ?>
-			<?php while (have_posts()) : the_post(); ?>
-				<a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title(); ?>"><?php the_title(); ?></a><br />
-			<?php endwhile;?>
+			
+			<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+			<script>
+				new TWTR.Widget({
+					version: 2,
+			    	type: 'profile',
+  					rpp: 6,
+  					interval: 30000,
+  					width: 600,
+  					height: 500,
+  					theme: {
+    				shell: {
+      				background: '#ffffff',
+      				color: '#050505'
+    			},
+    			tweets: {
+      				background: '#ffffff',
+      				color: '#575757',
+      				links: '#960606'
+    			}
+  				},
+  				features: {
+    				scrollbar: false,
+    				loop: false,
+    				live: false,
+    				behavior: 'default'
+  				}
+				}).render().setUser('RebexArt').start();
+			</script>
 		</div>
 		
 		<div id="painting_slides">
+			<a name="Paintings" id="Paintings"><img style="border: 0px solid ; width: 50px; height: 50px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/name_small.jpg"></a>
+			<h3>paintings</h3>
+			<p align="right"><a style="color: black;" href="en_paintings.html">... and more</a></p>
 			<div id="slides"> 
 				<div class="slides_container">
-					<a><img src="../artwork/painting/index_painting/001.jpg" width="570" height="400" alt="Slide 1"></a>
-					<a><img src="../artwork/painting/index_painting/002.jpg" width="570" height="400" alt="Slide 2"></a>
-					<a><img src="../artwork/painting/index_painting/003.jpg" width="570" height="281" alt="Slide 3"></a>
-					<a><img src="../artwork/painting/index_painting/004.jpg" width="570" height="400" alt="Slide 4"></a>
-					<a><img src="../artwork/painting/index_painting/005.jpg" width="570" height="400" alt="Slide 5"></a>
-					<a><img src="../artwork/painting/index_painting/006.jpg" width="570" height="400" alt="Slide 6"></a>
+					<a><img src="../artwork/painting/index_painting/001.jpg" width="450" height="335" alt="Slide 1"></a>
+					<a><img src="../artwork/painting/index_painting/002.jpg" width="450" height="351" alt="Slide 2"></a>
+					<a><img src="../artwork/painting/index_painting/003.jpg" width="450" height="222" alt="Slide 3"></a>
+					<a><img src="../artwork/painting/index_painting/004.jpg" width="450" height="296" alt="Slide 4"></a>
+					<a><img src="../artwork/painting/index_painting/005.jpg" width="450" height="333" alt="Slide 5"></a>
+					<a><img src="../artwork/painting/index_painting/006.jpg" width="450" height="356" alt="Slide 6"></a>
 				</div>
 				<a href="#" class="prev"><img src="../logo/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
 				<a href="#" class="next"><img src="../logo/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>
 			</div>
 		</div>
+
 		
 		<div id="drawing_slides">
+			<a name="Drawings" id="Drawings"><img style="border: 0px solid ; width: 50px; height: 50px; font-family: Arial Narrow;" alt="RebexArt.com" src="../logo/name_small.jpg"></a>
+			<h3>drawings</h3>
+			<p align="right"><a style="color: black;" href="en_drawings.html">... and more</a></p>
 			<div id="slides">
 				<div class="slides_container">
-					<a><img src="../artwork/drawing/index_drawing/001.jpg" width="428" height="600" alt="Slide 1"></a>
-					<a><img src="../artwork/drawing/index_drawing/002.jpg" width="452" height="600" alt="Slide 2"></a>
-					<a><img src="../artwork/drawing/index_drawing/003.jpg" width="451" height="600" alt="Slide 3"></a>
-					<a><img src="../artwork/drawing/index_drawing/004.jpg" width="445" height="600" alt="Slide 4"></a>
-					<a><img src="../artwork/drawing/index_drawing/005.jpg" width="457" height="600" alt="Slide 5"></a>
-					<a><img src="../artwork/drawing/index_drawing/006.jpg" width="419" height="600" alt="Slide 6"></a>
+					<a><img src="../artwork/drawing/index_drawing/001.jpg" width="428" height="590" alt="Slide 1"></a>
+					<a><img src="../artwork/drawing/index_drawing/002.jpg" width="452" height="590" alt="Slide 2"></a>
+					<a><img src="../artwork/drawing/index_drawing/003.jpg" width="451" height="590" alt="Slide 3"></a>
+					<a><img src="../artwork/drawing/index_drawing/004.jpg" width="445" height="590" alt="Slide 4"></a>
+					<a><img src="../artwork/drawing/index_drawing/005.jpg" width="457" height="590" alt="Slide 5"></a>
+					<a><img src="../artwork/drawing/index_drawing/006.jpg" width="419" height="590" alt="Slide 6"></a>
 				</div>
 				<a href="#" class="prev"><img src="../logo/arrow-prev.png" width="24" height="43" alt="Arrow Prev"></a>
 				<a href="#" class="next"><img src="../logo/arrow-next.png" width="24" height="43" alt="Arrow Next"></a>

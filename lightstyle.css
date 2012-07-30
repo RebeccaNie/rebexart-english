@@ -9,7 +9,6 @@ html {
 #wrap {
 	width: 1200px;
 	margin:auto;
-	background: yellow;
 }
 
 #header {
@@ -19,13 +18,14 @@ html {
 	width: 1200px;
 	padding: 0px 0px;
 	background: white;
-	font-family: Georgia;
+	font-family: Helvetica;
 	font-size: 30px;
 	text-align: left;
 	list-style: none;
 	font-style: oblique;
 	font-weight: 400;
 	background: white;
+	z-index: 102;
 }
 
 #header  ul {
@@ -55,12 +55,14 @@ html {
 	text-align: right;
 	font-size: 20px;
 	color: black;
-	font-family:Georgia;
+	font-family:Helvetica;
 	list-style: none;
 	background: url(../logo/tunder_fly.jpg);
 	background-size: 100px 100%;
 	background-repeat: no-repeat;
+	background-color: white;
 	margin:auto;
+	z-index:102;
 }
 
 #sidebar  ul {
@@ -89,36 +91,57 @@ html {
 	width:900px;
 	padding-left: 50px;
 	padding-top: 50px;
+	padding-bottom: 50px;
 	background: white;
-	font-family:Georgia;
+	font-family:Helvetica;
 	box-shadow: 0px 0px 10px 3px grey;
 	border-radius: 5px;
 	word-wrap: break-word;
 	z-index:0;
 }
 
+#thumbnails {
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.icon {
+	margin: 5px 5px 5px 5px;
+	box-shadow: 0px 0px 10px 3px grey;
+	background-color: grey;
+	border-radius: 5px;
+}
+
+
+#painting_slides {
+	margin-top: 250px;
+	margin-bottom: 250px;
+	padding-top: 100px;
+	padding-right: 75px;
+	word-wrap: break-word;
+	z-index:1;
+}
+
+#drawing_slides {
+	margin-top: 250px;
+	margin-bottom: 250px;
+	padding-right: 75px;
+	word-wrap: break-word;
+	z-index:2;
+}
+
+
 /*
 	Slideshow
 */
 
 #slides {
-	margin-top: 250px;
-	margin-bottom: 250px;
 	margin-left:auto;
 	margin-right:auto;
 	width:600px;
-	height:600px;
+	height:620px;
 	position:relative;
 	z-index:100;
-}
-
-#frame {
-	position:absolute;
-	z-index:0;
-	width:739px;
-	height:341px;
-	top:-3px;
-	left:-80px;
 }
 
 /*
@@ -130,13 +153,11 @@ html {
 
 .slides_container {
 	width:570px;
+	height: 620px;
 	overflow:hidden;
-	position:relative;
+	position:fixed;
 	display:block;
-	padding-left: auto;
-	padding-right: auto;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px 3px grey;
+	/*box-shadow: 0px 0px 10px 3px grey;*/
 }
 
 /*
@@ -147,18 +168,15 @@ html {
 	Set to display block
 */
 
-/*.slides_container a {
-	width:600px
+.slides_container a {
+	width:500px
 	display:block;
-	box-shadow: 0px 0px 10px 3px grey; */
-}
-
-.slides_container a img {
-	display:block;
-	padding-right: auto;
-	padding-left: auto;
+	margin-top:10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	background-color: grey;
 	border-radius: 5px;
-	box-shadow: 0px 0px 10px 3px grey;
+	box-shadow: 0px 0px 10px 3px grey; 
 }
 
 /*
@@ -167,8 +185,7 @@ html {
 
 #slides .next,#slides .prev {
 	position:absolute;
-	top:10px;
-	left:-39px;
+	top:15px;
 	width:24px;
 	height:43px;
 	display:block;
@@ -176,8 +193,10 @@ html {
 }
 
 #slides .next {
-	left:585px;
+	left:570px;
 }
+
+
 
 /*
 	Pagination
@@ -216,12 +235,13 @@ html {
 #footer {
 	position: fixed;
 	bottom: 0;
-	margin:auto;
+	margin-left:auto;
+	margin-right:auto;
 	text-align: right;
 	padding: 5px 10ps;
 	background: white;
 	font-family:Helvetica;
-	font-size: 11px;
+	font-size: 10px;
 }
 
 #footer p{
