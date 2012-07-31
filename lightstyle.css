@@ -112,6 +112,11 @@ html {
 	border-radius: 5px;
 }
 
+#text{
+	text-align: justified;
+	width: 800px;
+	word-wrap: break-word;
+}
 
 #painting_slides {
 	margin-top: 250px;
