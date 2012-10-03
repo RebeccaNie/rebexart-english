@@ -57,7 +57,7 @@ html {
 	color: black;
 	font-family:Helvetica;
 	list-style: none;
-	background: url(../logo/tunder_fly.jpg);
+	background: url(logo/tunder_fly.jpg);
 	background-size: 100px 100%;
 	background-repeat: no-repeat;
 	background-color: white;
@@ -195,13 +195,17 @@ html {
 	height:43px;
 	display:block;
 	z-index:101;
+	border: 0;
 }
 
 #slides .next {
 	left:570px;
+	border: 0;
 }
 
-
+a img{
+	border: none;
+}
 
 /*
 	Pagination
@@ -223,7 +227,7 @@ html {
 	width:12px;
 	height:0;
 	padding-top:12px;
-	background-image:url(../img/pagination.png);
+	background-image:url(img/pagination.png);
 	background-position:0 0;
 	float:left;
 	overflow:hidden;
@@ -238,7 +242,7 @@ html {
 
 */
 
-/* line 6, ../sass/lightbox.sass */
+/* line 6, sass/lightbox.sass */
 #lightboxOverlay {
   position: absolute;
   top: 0;
@@ -250,7 +254,7 @@ html {
   display: none;
 }
 
-/* line 15, ../sass/lightbox.sass */
+/* line 15, sass/lightbox.sass */
 #lightbox {
   position: absolute;
   left: 0;
@@ -261,17 +265,18 @@ html {
   font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
   font-weight: normal;
 }
-/* line 24, ../sass/lightbox.sass */
+/* line 24, sass/lightbox.sass */
 #lightbox img {
   width: auto;
   height: auto;
+  border: none;
 }
-/* line 27, ../sass/lightbox.sass */
+/* line 27, sass/lightbox.sass */
 #lightbox a img {
   border: none;
 }
 
-/* line 30, ../sass/lightbox.sass */
+/* line 30, sass/lightbox.sass */
 .lb-outerContainer {
   position: relative;
   background-color: white;
@@ -285,19 +290,19 @@ html {
   -o-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, .rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .lb-outerContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 39, ../sass/lightbox.sass */
+/* line 39, sass/lightbox.sass */
 .lb-container {
   padding: 10px;
 }
 
-/* line 42, ../sass/lightbox.sass */
+/* line 42, sass/lightbox.sass */
 .lb-loader {
   position: absolute;
   top: 40%;
@@ -308,7 +313,7 @@ html {
   line-height: 0;
 }
 
-/* line 51, ../sass/lightbox.sass */
+/* line 51, sass/lightbox.sass */
 .lb-nav {
   position: absolute;
   top: 0;
@@ -318,17 +323,17 @@ html {
   z-index: 10;
 }
 
-/* line 59, ../sass/lightbox.sass */
+/* line 59, sass/lightbox.sass */
 .lb-container > .nav {
   left: 0;
 }
 
-/* line 62, ../sass/lightbox.sass */
+/* line 62, sass/lightbox.sass */
 .lb-nav a {
   outline: none;
 }
 
-/* line 65, ../sass/lightbox.sass */
+/* line 65, sass/lightbox.sass */
 .lb-prev, .lb-next {
   width: 49%;
   height: 100%;
@@ -337,29 +342,29 @@ html {
   display: block;
 }
 
-/* line 72, ../sass/lightbox.sass */
+/* line 72, sass/lightbox.sass */
 .lb-prev {
   left: 0;
   float: left;
 }
 
-/* line 76, ../sass/lightbox.sass */
+/* line 76, sass/lightbox.sass */
 .lb-next {
   right: 0;
   float: right;
 }
 
-/* line 81, ../sass/lightbox.sass */
+/* line 81, sass/lightbox.sass */
 .lb-prev:hover {
-  background: url(../logo/prev.png) left 48% no-repeat;
+  background: url(logo/prev.png) left 48% no-repeat;
 }
 
-/* line 85, ../sass/lightbox.sass */
+/* line 85, sass/lightbox.sass */
 .lb-next:hover {
-  background: url(../logo/next.png) right 48% no-repeat;
+  background: url(logo/next.png) right 48% no-repeat;
 }
 
-/* line 88, ../sass/lightbox.sass */
+/* line 88, sass/lightbox.sass */
 .lb-dataContainer {
   margin: 0 auto;
   padding-top: 5px;
@@ -376,46 +381,46 @@ html {
   -o-border-bottom-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 38, ../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+/* line 38, .rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
 .lb-dataContainer:after {
   content: "";
   display: table;
   clear: both;
 }
 
-/* line 95, ../sass/lightbox.sass */
+/* line 95, sass/lightbox.sass */
 .lb-data {
   padding: 0 10px;
   color: #bbbbbb;
 }
-/* line 98, ../sass/lightbox.sass */
+/* line 98, sass/lightbox.sass */
 .lb-data .lb-details {
   width: 85%;
   float: left;
   text-align: left;
   line-height: 1.1em;
 }
-/* line 103, ../sass/lightbox.sass */
+/* line 103, sass/lightbox.sass */
 .lb-data .lb-caption {
   font-size: 13px;
   font-weight: bold;
   line-height: 1em;
 }
-/* line 107, ../sass/lightbox.sass */
+/* line 107, sass/lightbox.sass */
 .lb-data .lb-number {
   display: block;
   clear: left;
   padding-bottom: 1em;
   font-size: 11px;
 }
-/* line 112, ../sass/lightbox.sass */
+/* line 112, sass/lightbox.sass */
 .lb-data .lb-close {
   width: 35px;
   float: right;
   padding-bottom: 0.7em;
   outline: none;
 }
-/* line 117, ../sass/lightbox.sass */
+/* line 117, sass/lightbox.sass */
 .lb-data .lb-close:hover {
   cursor: pointer;
 }
