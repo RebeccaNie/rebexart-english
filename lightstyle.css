@@ -118,6 +118,16 @@ html {
 	word-wrap: break-word;
 }
 
+#text2{
+	font-family:Georgia;
+	font-size: 23px;
+	text-align: justified;
+	width: 500px;
+	word-wrap: break-word;
+	color:#C32525;
+	text-shadow: 0.1em 0.1em 0.2em grey
+}
+
 #painting_slides {
 	margin-top: 250px;
 	margin-bottom: 250px;
