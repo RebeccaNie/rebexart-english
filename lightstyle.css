@@ -115,6 +115,8 @@ html {
 	text-align: center;
 	font-size: 24px;
 	font-family: Helvetica;
+	margin-top: 10px;
+	margin-bottom: 10px;
 	background-color:#eb9797;
 	width:900px;
 }
