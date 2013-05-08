@@ -111,7 +111,13 @@ html {
 	background-color: grey;
 	border-radius: 5px;
 }
-
+#menu{
+	text-align: center;
+	font-size: 24px;
+	font-family: Helvetica;
+	background-color:#eb9797;
+	width:900px;
+}
 #text{
 	text-align: justified;
 	width: 800px;
@@ -128,24 +134,6 @@ html {
 	text-shadow: 0.1em 0.1em 0.2em grey
 }
 
-#painting_slides {
-	margin-top: 250px;
-	margin-bottom: 250px;
-	padding-top: 100px;
-	padding-right: 75px;
-	word-wrap: break-word;
-	z-index:1;
-}
-
-#drawing_slides {
-	margin-top: 250px;
-	margin-bottom: 250px;
-	padding-right: 75px;
-	word-wrap: break-word;
-	z-index:2;
-}
-
-
 /*
 	Slideshow from http://slidesjs.com/
 */
@@ -153,8 +141,7 @@ html {
 #slides {
 	margin-left:auto;
 	margin-right:auto;
-	width:600px;
-	height:620px;
+	width:900px;
 	position:relative;
 	z-index:100;
 }
@@ -167,8 +154,6 @@ html {
 */
 
 .slides_container {
-	width:570px;
-	height: 620px;
 	overflow:hidden;
 	position:fixed;
 	display:block;
@@ -183,15 +168,18 @@ html {
 	Set to display block
 */
 
-.slides_container a {
-	width:500px
+div.slides_container a {
+	width:900px;
 	display:block;
 	margin-top:10px;
-	margin-left: 5%;
 	margin-right: 5%;
-	background-color: grey;
-	border-radius: 5px;
-	box-shadow: 0px 0px 10px 3px grey; 
+	position: absolute;
+}
+
+div.slides_control {
+position: relative;
+height: 264px;
+left: -900px;
 }
 
 /*
