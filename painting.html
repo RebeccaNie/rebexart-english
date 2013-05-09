@@ -9,6 +9,22 @@
 	
 	<script src="js/jquery-1.7.2.min.js"></script>
 	<script src="js/lightbox.js"></script>
+	<!-- The slides script -->
+	<script src="js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#picture_slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				autoHeight: true,
+				play: 50000,
+				pause: 25000,
+				hoverPause: true
+			});
+		});
+	</script>
+	<!-- end of the slides script -->
+
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
@@ -40,18 +56,36 @@
 		</table>	
 	</div>
 	
-	<div id="sidebar">
-		<ul>
-			<li><a style="color: black;" href="index.html">home</a></li>
-			<li><a style="color: black;" href="painting.html">painting</a></li>
-			<li><a style="color: black;" href="drawing.html">drawing</a></li>
-			<li><a style="color: black;" href="artist_bio.html">about</a></li>
-			<li><a style="color: black;" href="http://www.rebexart.com/english/blog/">blog</a></li>
-		</ul> 
-
-	</div>
-	
 	<div id="main">
+		<!-- Menu and header slides -->
+		<div id="menu">
+			<a style="color: black;" href="index.html">HOME</a> |
+			<a style="color: black;" href="painting.html">PAINTING</a> |
+			<a style="color: black;" href="drawing.html">DRAWING</a> |
+			<a style="color: black;" href="store.html">STORE</a> |
+			<a style="color: black;" href="artist_bio.html">ABOUT</a> |
+			<a style="color: black;" href="http://www.rebexart.com/english/blog/">BLOG</a>
+		</div>
+		<!--[if IE]>
+		<img src="logo/my-pix/yosemite_yoga.jpg" width="900" height="260" alt="Header">
+		<![endif]-->		
+		<![if !IE]>
+		<div id="picture_slides">
+			<div id="slides"> 
+				<div class="slides_container">
+					<a><img src="logo/my-pix/redrock.jpg" width="900" height="260" alt="Slide 1"></a>
+					<a><img src="logo/my-pix/terrance_field.jpg" width="900" height="260" alt="Slide 2"></a>
+					<a><img src="logo/my-pix/yosemite_yoga.jpg" width="900" height="260" alt="Slide 3"></a>
+				</div>
+			</div>
+		</div>
+		<![endif]>
+	<!-- End of Menu and header slides -->
+		<div id="text2">
+		Traditional painting is currently my main focus, and I can't get enough of the sensation of wet brush gliding on canvas.
+		<br>
+		<br>
+		</div>
 		<div id="thumbnails">
 			<table>
 				<tr>
@@ -76,7 +110,16 @@
 					<td><div class="imagebox"><a href="artwork/painting/deadlock.jpg" title="Deadlock, 11X14 acrylic on paper" rel="lightbox[painting]"><img src="artwork/painting/icon/deadlock_icon.jpg" width="150" height="150" alt="Lotus Impression" /></a></div></td>	
 				</tr>
 			</table>
-	</div>
+    	</div>
+
+		<div id="menu">
+			<a style="color: black;" href="index.html">HOME</a> |
+			<a style="color: black;" href="painting.html">PAINTING</a> |
+			<a style="color: black;" href="drawing.html">DRAWING</a> |
+			<a style="color: black;" href="store.html">STORE</a> |
+			<a style="color: black;" href="artist_bio.html">ABOUT</a> |
+			<a style="color: black;" href="http://www.rebexart.com/english/blog/">BLOG</a>
+		</div>
 
 	<div id="footer">
 		<p> Unless otherwise stated, All images and texts on this site are copy righted to Rebecca Nie : rebex@rebexart.com </p>

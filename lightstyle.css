@@ -18,7 +18,7 @@ html {
 	width: 1200px;
 	padding: 0px 0px;
 	background: white;
-	font-family: Helvetica;
+	font-family: Georgia;
 	font-size: 30px;
 	text-align: left;
 	list-style: none;
@@ -55,7 +55,7 @@ html {
 	text-align: right;
 	font-size: 20px;
 	color: black;
-	font-family:Helvetica;
+	font-family:Georgia;
 	list-style: none;
 	background: url(logo/tunder_fly.jpg);
 	background-size: 100px 100%;
@@ -84,8 +84,8 @@ html {
 #main {
 	float: left;
 	margin-top: 75px;
-	margin-left:250px;
-	margin-right:250px;
+	margin-left:100px;
+	margin-right:auto; 
 	margin-bottom: 100px;
 	position: static;
 	width:900px;
@@ -93,7 +93,7 @@ html {
 	padding-top: 50px;
 	padding-bottom: 50px;
 	background: white;
-	font-family:Helvetica;
+	font-family:Georgia;
 	box-shadow: 0px 0px 10px 3px grey;
 	border-radius: 5px;
 	word-wrap: break-word;
@@ -114,7 +114,7 @@ html {
 #menu{
 	text-align: center;
 	font-size: 24px;
-	font-family: Helvetica;
+	font-family: Georgia;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	background-color:#eb9797;
@@ -437,7 +437,7 @@ a img{
 	text-align: right;
 	padding: 5px 10ps;
 	background: white;
-	font-family:Helvetica;
+	font-family:Georgia;
 	font-size: 10px;
 }
 
